@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pubfix/Model/Evenement/ajouter_evenement.dart';
 import 'package:pubfix/Screen_citoyen/Actualite/liste_actualite.dart';
 import 'package:pubfix/Screen_citoyen/dashboard/dashboard.dart';
 import 'package:pubfix/Screen_citoyen/profile/account_screen.dart';
@@ -63,6 +64,7 @@ class _HomeState extends State<Home> {
     const Rapports(),
     const ListeActualite(),
     const AccountScreen(),
+    const AjoutEvenement(),
   ];
 
   @override
@@ -108,13 +110,14 @@ class _HomeState extends State<Home> {
               _buildBottomNavigationBarItem(Icons.home, "Accueil", 0),
               _buildBottomNavigationBarItem(
                   Icons.timer_outlined, "Demandes", 1),
+
               // const Spacer(),
-              const SizedBox(
-                width: 10,
-              ),
+
               _buildBottomNavigationBarItem(
                   Icons.app_registration_sharp, "Actualités", 2),
-              _buildBottomNavigationBarItem(Icons.settings, "Paramètres", 3),
+              _buildBottomNavigationBarItem(
+                  Icons.accessibility_outlined, "Evènement", 3),
+              _buildBottomNavigationBarItem(Icons.settings, "Paramètres", 4),
             ],
           ),
         ),
