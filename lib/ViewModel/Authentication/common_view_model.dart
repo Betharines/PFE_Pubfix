@@ -17,10 +17,30 @@ class CommonViewModel {
     return fullAddress;
   }
 
-  showSnackBar(String message, BuildContext context) {
+  /* showSnackBar(String message, BuildContext context) {
     final snackBar = SnackBar(
       content: Text(message),
     );
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  }*/
+
+  showSnackBar(String message, BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text("Erreur"),
+          content: Text(message),
+          actions: <Widget>[
+            TextButton(
+              child: const Text("OK"),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
   }
 }
