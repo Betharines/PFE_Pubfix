@@ -94,7 +94,7 @@ class _HomeState extends State<Home> {
           color: Colors.white,
         ),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         color: const Color.fromARGB(255, 14, 189, 148),
         shape: const CircularNotchedRectangle(),
